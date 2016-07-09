@@ -8,26 +8,27 @@ module Itemable
   def add_new_item(klass, properties_hash)
     item = klass.create!(properties_hash)
     ListedItem.create!(
-                       list_id: id,
-                       listable_id: item.id,
-                       listable_type: item.class.name,
-                       position: current_length,
-                      )
+      list_id: id,
+      listable_id: item.id,
+      listable_type: item.class.name,
+      position: current_length
+    )
     item
   end
 
   def add_item(item)
     ListedItem.create!(
-                       listable_id: item.id,
-                       listable_type: item.class.name,
-                       list_id: id,
-                       position: current_length
-                      )
+      listable_id: item.id,
+      listable_type: item.class.name,
+      list_id: id,
+      position: current_length
+    )
     true
   end
 
   def items_of_type(klass)
-    listed_items = ListedItem.select(:listable_id).where(list_id: id, listable_type: klass.to_s)
+    listed_items = ListedItem.select(:listable_id)
+                             .where(list_id: id, listable_type: klass.to_s)
     klass.where(id: listed_items)
   end
 
