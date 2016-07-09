@@ -1,17 +1,11 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-# This model initially had no columns defined. If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one:
+tasked_list:
   id: 1
   name: 'list with tasks'
 
-two:
+noted_list:
   id: 2
   name: 'list with notes'
 
-three:
+tasks_and_notes_list:
   id: 3
   name: 'list with notes and tasks'
