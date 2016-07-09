@@ -7,6 +7,8 @@ class ListedItem < ApplicationRecord
     case listable_type
     when 'Task'
       Task.find(listable_id)
+    when 'Note'
+      Note.find(listable_id)
       # else
       # TODO: Raise an exception if no listed_item
     end

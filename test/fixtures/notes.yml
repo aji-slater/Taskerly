@@ -4,14 +4,8 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one:
-  id: 1
-  name: 'list with tasks'
-
-two:
-  id: 2
-  name: 'list with notes'
-
-three:
-  id: 3
-  name: 'list with notes and tasks'
+one: {}
+# column: value
+#
+two: {}
+# column: value
