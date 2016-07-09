@@ -1,16 +1,18 @@
-require 'record_machine/taskable'
+require 'itemable'
 
 class List < ApplicationRecord
-  include Taskable
+  # include Taskable
+  # include Notable
+  include Itemable
   belongs_to :user
 
   def notes
     listed_notes = ListedItem.where(list_id: id, listable_type: 'Note')
-    Note.where(id: listed_notes)
+    Note.where(id: listed_notes.listable_id)
   end
 
   def items
-    listed_tasks = tasks
-    listed_notes.merge(listed_tasks)
+    binding.pry
+    notes.merge(tasks)
   end
 end

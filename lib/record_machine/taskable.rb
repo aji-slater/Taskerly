@@ -3,9 +3,11 @@ module Taskable
   def add_new_task(name, due = nil)
     task = Task.create!(name: name, due_date: due)
     ListedItem.create!(
-      listed_item_id: task.id,
+      listable_id: task.id,
       listable_type: 'Task',
-      list_id: id
+      list_id: id,
+      # TODO make live user
+      user_id: 1
     )
     task
   end
@@ -13,7 +15,7 @@ module Taskable
   def add_task(task_id)
     task = Task.find(task_id)
     ListedItem.create!(
-      listed_item_id: task.id,
+      listable_id: task.id,
       listable_type: 'Task',
       list_id: id
     )

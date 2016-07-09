@@ -1,6 +1,4 @@
 class ListedItem < ApplicationRecord
-  belongs_to :user
-
   def list
     List.find(list_id)
   end
