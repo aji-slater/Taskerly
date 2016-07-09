@@ -1,3 +1,5 @@
+require 'record_machine/taskable'
+
 class List < ApplicationRecord
   include Taskable
   belongs_to :user

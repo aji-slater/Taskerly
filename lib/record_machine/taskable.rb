@@ -2,13 +2,21 @@
 module Taskable
   def add_new_task(name, due = nil)
     task = Task.create!(name: name, due_date: due)
-    ListedItem.create!(listed_item_id: task.id, listable_type: 'Task', list_id: id)
+    ListedItem.create!(
+      listed_item_id: task.id,
+      listable_type: 'Task',
+      list_id: id
+    )
     task
   end
 
   def add_task(task_id)
     task = Task.find(task_id)
-    ListedItem.create!(listed_item_id: task.id, listable_type: 'Task', list_id: id)
+    ListedItem.create!(
+      listed_item_id: task.id,
+      listable_type: 'Task',
+      list_id: id
+    )
     true
   end
 
