@@ -8,4 +8,5 @@ class User < ApplicationRecord
   has_many :notes
   has_many :comments
   has_many :stickers
+  has_many :jots
 end

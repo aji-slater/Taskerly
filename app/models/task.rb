@@ -5,5 +5,4 @@ class Task < ApplicationRecord
   has_many :stickings, as: :stickerable, class_name: 'StickeredItem'
   has_many :stickers, through: :stickings
   has_many :comments, as: :commentable
-
 end
