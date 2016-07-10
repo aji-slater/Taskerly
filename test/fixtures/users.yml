@@ -1,0 +1,3 @@
+tester:
+  email: 'steve@mctesting.com'
+  encrypted_password: '$2a$11$XgkKHEwdt06rcodGU2x2AuDLcxwZGoPCWRZPR9ZsAcTX7lBSJt0ZC' # welcome
