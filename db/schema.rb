@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160710010118) do
+ActiveRecord::Schema.define(version: 20160710011332) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,25 @@ ActiveRecord::Schema.define(version: 20160710010118) do
     t.integer  "user_id",    null: false
     t.string   "name"
     t.text     "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "stickered_items", force: :cascade do |t|
+    t.string   "stickerable_type"
+    t.integer  "stickerable_id"
+    t.integer  "sticker_id",       null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["sticker_id"], name: "index_stickered_items_on_sticker_id", using: :btree
+    t.index ["stickerable_type", "stickerable_id"], name: "index_stickered_items_on_stickerable_type_and_stickerable_id", using: :btree
+  end
+
+  create_table "stickers", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "color"
+    t.string   "shape"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
