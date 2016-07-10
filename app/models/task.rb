@@ -1,7 +1,6 @@
 class Task < ApplicationRecord
   belongs_to :user
+  has_many :listings, as: :listable, class_name: 'ListedItem'
+  has_many :lists, through: :listings
 
-  def lists
-    ListedItem.where(listable_id: id, listable_type: 'Task')
-  end
 end
