@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.2.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
 # Use postgresql as the database for Active Record
@@ -26,7 +26,12 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 gem 'devise'
 
+# React.js framework with Rails Helpers
 gem 'react-rails'
+
+# Behavior for listable items
+# https://github.com/swanandp/acts_as_list
+gem 'acts_as_list'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

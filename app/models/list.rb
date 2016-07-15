@@ -8,4 +8,11 @@ class List < ApplicationRecord
   has_many :stickings, as: :stickerable, class_name: 'StickeredItem'
   has_many :stickers, through: :stickings
 
+  def items
+    items = []
+    listed_items.sort_by(&:position).each do |item|
+      items << item.listable
+    end
+    items
+  end
 end
