@@ -1,0 +1,19 @@
+@mixin fixed-to-top {
+  width: 100%;
+  left: 0;
+  position: fixed;
+}
+
+header {
+  @include fixed-to-top;
+  background-color: $taskerly-green;
+  height: $header-height;
+  top: 0;
+}
+
+.header__alerts {
+  @include fixed-to-top;
+  background-color: $header-alert-green;
+  height: $alert-height;
+  top: $header-height;
+}

@@ -9,6 +9,8 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails'
+# Slim for html
+gem 'slim-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -32,6 +34,8 @@ gem 'react-rails'
 # Behavior for listable items
 # https://github.com/swanandp/acts_as_list
 gem 'acts_as_list'
+# Bourbon style stack
+gem 'bourbon'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
