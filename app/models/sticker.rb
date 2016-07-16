@@ -4,4 +4,12 @@ class Sticker < ApplicationRecord
   has_many :tasks, through: :stickered_items, source: :stickerable, source_type: 'Task'
   has_many :notes, through: :stickered_items, source: :stickerable, source_type: 'Note'
   has_many :lists, through: :stickered_items, source: :stickerable, source_type: 'List'
+
+  def items
+    items = []
+    stickered_items.each do |item|
+      items << item.stickerable
+    end
+    items
+  end
 end
