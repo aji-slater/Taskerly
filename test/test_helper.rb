@@ -11,9 +11,7 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   # fixtures :all
   before do
-    if User.count < 1
-      FactoryGirl.create(:user)
-    end
+    FactoryGirl.create(:user) if User.count < 1
   end
 
   # Add more helper methods to be used by all tests here...

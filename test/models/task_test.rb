@@ -32,7 +32,7 @@ class TaskTest < ActiveSupport::TestCase
     list = FactoryGirl.create(:list)
     3.times { list.tasks.create(FactoryGirl.attributes_for(:task)) }
     task = list.tasks.create!(FactoryGirl.attributes_for(:task))
-    assert_equal 3, task.position_on(list)
+    assert_equal 4, task.position_on(list)
   end
 
   test 'task can be at two different positions on different lists' do
@@ -42,8 +42,8 @@ class TaskTest < ActiveSupport::TestCase
     list1 = FactoryGirl.create(:list)
     2.times { list1.tasks.create!(FactoryGirl.attributes_for(:task)) }
     list1.tasks << task
-    assert_equal 0, task.position_on(list)
-    assert_equal 2, task.position_on(list1)
+    assert_equal 1, task.position_on(list)
+    assert_equal 3, task.position_on(list1)
   end
 
   test 'tasks can have comments' do

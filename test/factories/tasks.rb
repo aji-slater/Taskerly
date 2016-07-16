@@ -5,6 +5,11 @@ FactoryGirl.define do
     user { User.first }
     name 'task'
 
+    factory :task_unique_name do
+      id 555
+      name 'More Unique'
+    end
+
     # factory :dated_task do
     #   due_date { Date.new(2020, 12, 31) }
     # end
