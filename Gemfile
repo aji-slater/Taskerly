@@ -34,6 +34,8 @@ gem 'react-rails'
 # Behavior for listable items
 # https://github.com/swanandp/acts_as_list
 gem 'acts_as_list'
+# Bourbon style stack
+gem 'bourbon'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -1,0 +1,16 @@
+$header-height: 4em !default;
+$alert-height: .3em;
+$content-wrap-padding: $header-height + $alert-height + .5em;
+
+* {
+  @include box-sizing(border-box);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#content-wrapper {
+  padding: $content-wrap-padding .5em .5em;
+}
