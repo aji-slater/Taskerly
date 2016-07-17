@@ -12,6 +12,8 @@ body {
   padding: 0;
 }
 
-#content-wrapper {
+.content-wrapper {
+  margin: 0 auto;
+  max-width: 1024px;
   padding: $content-wrap-padding .5em .5em;
 }

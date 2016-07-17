@@ -1,6 +1,6 @@
 class Task < ApplicationRecord
   include Listable
-  
+
   belongs_to :user
   has_many :listings, as: :listable, class_name: 'ListedItem'
   has_many :lists, through: :listings
@@ -8,5 +8,6 @@ class Task < ApplicationRecord
   has_many :stickers, through: :stickings
   has_many :comments, as: :commentable
 
+  default_scope { order('id ASC') }
 
 end
