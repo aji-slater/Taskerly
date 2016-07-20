@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ListedItemTest < ActiveSupport::TestCase
   setup do
-    user = User.create!(email: 'test@example.com', password: 'welcome')
+    User.create!(email: 'test@example.com', password: 'welcome')
     @list = FactoryGirl.create(:list)
     2.times do
       @list.tasks.create!(FactoryGirl.attributes_for(:task))
