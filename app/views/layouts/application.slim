@@ -5,7 +5,7 @@ head
   = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Source+Sans+Pro'
   = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
-body
+body class="#{params[:controller]} #{params[:action]}"
 
   = render partial: 'layouts/header'
   = render partial: 'layouts/sidebar'
