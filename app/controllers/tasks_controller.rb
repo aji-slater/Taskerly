@@ -4,7 +4,7 @@ class TasksController < ApplicationController
   end
 
   def update
-    task = Task.find(params[:id])
+    task = current_user.tasks.find(params[:id])
     return unless task.update!(task_params)
     render nothing: true
   end
