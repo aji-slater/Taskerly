@@ -28,6 +28,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 gem 'devise'
 
+# Form helpers library
+gem 'simple_form'
+
 # React.js framework with Rails Helpers
 gem 'react-rails'
 

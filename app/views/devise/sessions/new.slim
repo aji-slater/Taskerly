@@ -1,0 +1,11 @@
+.sign-in__content--wrapper
+  h1 Welcome Back!
+
+  = simple_form_for resource_name, url: session_path(resource_name) do |f|
+      = f.input :email, label: 'Email'
+      = f.input :password, label: 'Password'
+      - if devise_mapping.rememberable?
+        = f.input :remember_me, label: 'Remember me next time', as: :boolean
+      = f.button :submit, 'Log in'
+
+  = render 'devise/shared/links'

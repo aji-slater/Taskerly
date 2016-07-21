@@ -1,0 +1,15 @@
+.sign-in__content--wrapper {
+  margin-left: 30%;
+}
+
+.simple_form.user {
+
+  input {
+    display: block;
+  }
+
+  input[type='checkbox'] {
+    display: inline-block;
+    margin-right: .5em;
+  }
+}

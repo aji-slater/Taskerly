@@ -1,6 +1,8 @@
 $header-height: 3em !default;
 $alert-height: .3em;
 $content-wrap-padding: $header-height + $alert-height + .5em;
+$border-radius: 3px;
+
 
 * {
   @include box-sizing(border-box);
@@ -16,4 +18,5 @@ body {
   margin: 0 auto;
   max-width: 1024px;
   padding: $content-wrap-padding .5em .5em;
+  position: relative;
 }
