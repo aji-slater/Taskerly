@@ -1,4 +1,4 @@
-$header-height: 4em !default;
+$header-height: 3em !default;
 $alert-height: .3em;
 $content-wrap-padding: $header-height + $alert-height + .5em;
 
@@ -7,10 +7,13 @@ $content-wrap-padding: $header-height + $alert-height + .5em;
 }
 
 body {
+  @include default-font;
   margin: 0;
   padding: 0;
 }
 
-#content-wrapper {
+.content-wrapper {
+  margin: 0 auto;
+  max-width: 1024px;
   padding: $content-wrap-padding .5em .5em;
 }
