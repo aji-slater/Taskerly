@@ -9,5 +9,4 @@ class Task < ApplicationRecord
   has_many :comments, as: :commentable
 
   default_scope { order('id ASC') }
-
 end

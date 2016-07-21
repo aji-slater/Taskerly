@@ -17,3 +17,22 @@ header {
   height: $alert-height;
   top: $header-height;
 }
+
+.navigation-bar__links {
+  bottom: 0;
+  margin-bottom: .2em;
+  position: absolute;
+
+  li {
+    display: inline-block;
+    margin: 0 1em;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      font-style: italic;
+    }
+  }
+}
